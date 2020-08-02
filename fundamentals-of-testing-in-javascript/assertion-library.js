@@ -1,14 +1,28 @@
 const { sum, subtract } = require('./math')
 
-let result = sum(3, 7)
-let expected = 10
+test('sum two numbers', () => {
+    const result = sum(3, 7)
+    const expected = 10
+    
+    expect(result).toBe(expected)
+});
 
-expect(result).toBe(expected)
+test('subtract two numbers', () => {
+    const result = subtract(7, 3)
+    const expected = 4
+    
+    expect(result).toBe(expected)
+});
 
-result = subtract(7, 3)
-expected = 4
-
-expect(result).toBe(expected)
+function test(title, callback) {
+    try {
+        callback()
+        console.log(`✓ ${title}`)
+    } catch(error) {
+        console.log(`✕ ${title}`)
+        console.log(error)
+    }
+}
 
 function expect(actual) {
     return {
