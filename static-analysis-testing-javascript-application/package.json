@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "babel src --out-dir dist"
+    "build": "babel src --out-dir dist",
+    "lint": "eslint --ignore-path ../.gitignore ."
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
