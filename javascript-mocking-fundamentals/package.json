@@ -2,5 +2,8 @@
   "name": "javascript-mocking-fundamentals",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^26.2.2"
+  }
 }
